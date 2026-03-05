@@ -6,7 +6,6 @@
   <title>Developer Profile — ABC Logistics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
     :root {
       --bg:        #f4f6f9;
@@ -49,13 +48,8 @@
 
     .nav-logo {
       font-family: var(--font-head);
-      font-size: 1.3rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-size: 1.3rem; font-weight: 800; letter-spacing: 0.5px;
+      color: var(--text); display: flex; align-items: center; gap: 10px;
     }
 
     .nav-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
@@ -121,9 +115,9 @@
 
     .hero-name {
       font-family: var(--font-head);
-      font-size: 2.2rem;
+      font-size: 2.6rem;
       font-weight: 800;
-      letter-spacing: -1.5px;
+      letter-spacing: 0.5px;
       color: var(--text);
       line-height: 1;
       margin-bottom: 8px;
@@ -160,16 +154,7 @@
       padding: 4px 12px; font-size: 0.75rem; font-weight: 500;
     }
 
-    /* ── SECTIONS ── */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    @media (max-width: 680px) { .two-col { grid-template-columns: 1fr; } }
-
+    /* ── CARD ── */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -177,14 +162,7 @@
       box-shadow: var(--shadow);
       overflow: hidden;
       animation: fadeUp 0.4s ease both;
-    }
-
-    .card:nth-child(1) { animation-delay: 0.08s; }
-    .card:nth-child(2) { animation-delay: 0.14s; }
-
-    .card-full {
       margin-bottom: 1.5rem;
-      animation: fadeUp 0.4s 0.2s ease both;
     }
 
     .card-header {
@@ -195,9 +173,7 @@
 
     .card-title {
       font-family: var(--font-head);
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      font-size: 1.1rem; font-weight: 700; letter-spacing: 0.5px;
       color: var(--text);
     }
 
@@ -208,79 +184,14 @@
       font-size: 0.9rem;
     }
 
-    .icon-blue   { background: #eff6ff; }
-    .icon-orange { background: #fff7ed; }
-    .icon-green  { background: #f0fdf4; }
-    .icon-purple { background: #fdf4ff; }
+    .icon-blue  { background: #eff6ff; }
+    .icon-green { background: #f0fdf4; }
 
     .card-body { padding: 1.5rem; }
 
     /* ── ABOUT TEXT ── */
     .about-text { font-size: 0.9rem; line-height: 1.8; color: var(--sub); }
     .about-text p + p { margin-top: 0.9rem; }
-
-    /* ── SKILLS ── */
-    .skill-list { display: flex; flex-direction: column; gap: 14px; }
-
-    .skill-meta {
-      display: flex; justify-content: space-between;
-      margin-bottom: 5px;
-    }
-
-    .skill-name { font-size: 0.83rem; font-weight: 500; color: var(--text); }
-    .skill-pct  { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); }
-
-    .skill-bar {
-      height: 5px; background: var(--border);
-      border-radius: 99px; overflow: hidden;
-    }
-
-    .skill-fill {
-      height: 100%; border-radius: 99px;
-      transform: scaleX(0); transform-origin: left;
-      transition: transform 0.9s cubic-bezier(0.16,1,0.3,1);
-      background: var(--accent);
-    }
-
-    .skill-fill.loaded { transform: scaleX(1); }
-    .skill-fill.orange  { background: var(--accent2); }
-    .skill-fill.green   { background: var(--success); }
-    .skill-fill.purple  { background: var(--purple); }
-
-    /* ── PROJECTS ── */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-      gap: 1rem;
-    }
-
-    .project-card {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem;
-      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
-    }
-
-    .project-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(37,99,235,0.1);
-    }
-
-    .project-emoji { font-size: 1.4rem; margin-bottom: 10px; }
-    .project-title { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
-    .project-desc  { font-size: 0.8rem; color: var(--sub); line-height: 1.6; margin-bottom: 12px; }
-
-    .tag-row { display: flex; flex-wrap: wrap; gap: 5px; }
-
-    .tag {
-      background: #eff6ff; color: var(--accent);
-      border: 1px solid #bfdbfe; border-radius: 4px;
-      padding: 2px 8px; font-family: var(--font-mono); font-size: 0.62rem;
-    }
-
-    .tag.orange { background: #fff7ed; color: #ea580c; border-color: #fed7aa; }
-    .tag.purple { background: #fdf4ff; color: var(--purple); border-color: #e9d5ff; }
 
     /* ── CONTACT ── */
     .contact-list { display: flex; flex-direction: column; gap: 10px; }
@@ -333,121 +244,45 @@
     <div>
       <div class="hero-eyebrow">// developer profile</div>
       <div class="hero-name">Nathan Phan</div>
-      <div class="hero-title">SFU Student</div>
+      <div class="hero-title">SFU Student — Statistics Program</div>
       <div class="hero-links">
-        <span class="status-chip"><span class="status-dot"></span>Avaliable</span>
+        <span class="status-chip"><span class="status-dot"></span>Available</span>
         <span class="chip">📍 Burnaby, BC</span>
         <span class="chip">🎓 Statistics</span>
       </div>
     </div>
   </div>
 
-  <!-- ABOUT + SKILLS -->
-  <div class="two-col">
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon icon-blue">💡</div>
-        <span class="card-title">About Me</span>
-      </div>
-      <div class="card-body">
-        <div class="about-text">
-          <p>I am a SFU student currently in the Statistics program. This about me and this website was made in help with Claude AI for an assignment </p>
-          <p>Some other information about me is that I like to play games, and read in my spare time. I also have a twin brother</p>
-        </div>
-      </div>
-    </div>
-<!--
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon icon-orange">⚡</div>
-        <span class="card-title">Technical Skills</span>
-      </div>
-      <div class="card-body">
-        <div class="skill-list">
-          <div>
-            <div class="skill-meta"><span class="skill-name">HTML / CSS</span><span class="skill-pct">95%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-          </div>
-          <div>
-            <div class="skill-meta"><span class="skill-name">JavaScript</span><span class="skill-pct">90%</span></div>
-            <div class="skill-bar"><div class="skill-fill orange" style="width:90%"></div></div>
-          </div>
-          <div>
-            <div class="skill-meta"><span class="skill-name">React / Vue</span><span class="skill-pct">85%</span></div>
-            <div class="skill-bar"><div class="skill-fill green" style="width:85%"></div></div>
-          </div>
-          <div>
-            <div class="skill-meta"><span class="skill-name">Node.js / APIs</span><span class="skill-pct">80%</span></div>
-            <div class="skill-bar"><div class="skill-fill purple" style="width:80%"></div></div>
-          </div>
-          <div>
-            <div class="skill-meta"><span class="skill-name">SQL / Databases</span><span class="skill-pct">75%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- PROJECTS 
-  <div class="card card-full">
+  <!-- ABOUT -->
+  <div class="card" style="animation-delay: 0.08s;">
     <div class="card-header">
-      <div class="card-icon icon-purple">🚀</div>
-      <span class="card-title">Featured Projects</span>
+      <div class="card-icon icon-blue">💡</div>
+      <span class="card-title">About Me</span>
     </div>
     <div class="card-body">
-      <div class="project-grid">
-        <div class="project-card">
-          <div class="project-emoji">📦</div>
-          <div class="project-title">Inventory Command Center</div>
-          <div class="project-desc">Real-time warehouse dashboard with localStorage persistence, built for ABC Logistics.</div>
-          <div class="tag-row">
-            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-emoji">🚛</div>
-          <div class="project-title">Fleet Tracker Pro</div>
-          <div class="project-desc">Live vehicle tracking with route optimisation and real-time alert notifications.</div>
-          <div class="tag-row">
-            <span class="tag orange">React</span><span class="tag orange">Node.js</span><span class="tag orange">Maps API</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-emoji">📊</div>
-          <div class="project-title">Supply Chain Analytics</div>
-          <div class="project-desc">Data visualisation platform for supply chain KPIs and demand forecasting.</div>
-          <div class="tag-row">
-            <span class="tag purple">Vue</span><span class="tag purple">D3.js</span><span class="tag purple">SQL</span>
-          </div>
-        </div>
+      <div class="about-text">
+        <p>I am a SFU student currently in the Statistics program. This about me page and this website was made with the help of Claude AI for an assignment.</p>
+        <p>Some other information about me is that I like to play games and read in my spare time. I also have a twin brother.</p>
       </div>
     </div>
   </div>
--->
+
   <!-- CONTACT -->
-  <div class="card" style="animation: fadeUp 0.4s 0.26s ease both;">
+  <div class="card" style="animation-delay: 0.16s;">
     <div class="card-header">
       <div class="card-icon icon-green">✉️</div>
       <span class="card-title">Get in Touch</span>
     </div>
     <div class="card-body">
       <div class="contact-list">
-        <a href="mailto:alex.chen@devstudio.io" class="contact-row">
-          <div class="contact-icon">✉️</div>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">npa41@sfu.ca</div>
-          </div>
-        </a>
-        <a href="tel:+16045550192" class="contact-row">
+        <a href="tel:+17787791714" class="contact-row">
           <div class="contact-icon">📞</div>
           <div>
             <div class="contact-label">Phone</div>
             <div class="contact-value">+1 778-779-1714</div>
           </div>
         </a>
-        <a href="https://github.com" target="_blank" class="contact-row">
+        <a href="https://github.com/npa41" target="_blank" class="contact-row">
           <div class="contact-icon">⌨️</div>
           <div>
             <div class="contact-label">GitHub</div>
