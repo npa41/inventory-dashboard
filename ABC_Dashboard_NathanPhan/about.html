@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Developer Profile — ABC Logistics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
     :root {
       --bg:        #f4f6f9;
@@ -20,7 +21,7 @@
       --text:      #0f172a;
       --sub:       #475569;
       --muted:     #94a3b8;
-      --font-head: 'Syne', sans-serif;
+      --font-head: 'Barlow Condensed', sans-serif;
       --font-body: 'DM Sans', sans-serif;
       --font-mono: 'DM Mono', monospace;
       --shadow:    0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
@@ -48,8 +49,13 @@
 
     .nav-logo {
       font-family: var(--font-head);
-      font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px;
-      color: var(--text); display: flex; align-items: center; gap: 10px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .nav-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
@@ -189,7 +195,10 @@
 
     .card-title {
       font-family: var(--font-head);
-      font-size: 0.9rem; font-weight: 700; letter-spacing: -0.3px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--text);
     }
 
     .card-icon {
@@ -342,7 +351,7 @@
       </div>
       <div class="card-body">
         <div class="about-text">
-          <p>I am currently an SFU student currently in the Statistics program. This about me and this website was made in help with Claude AI for an assignment </p>
+          <p>I am a SFU student currently in the Statistics program. This about me and this website was made in help with Claude AI for an assignment </p>
           <p>Some other information about me is that I like to play games, and read in my spare time. I also have a twin brother</p>
         </div>
       </div>

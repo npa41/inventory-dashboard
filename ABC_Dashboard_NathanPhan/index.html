@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inventory Command Center — ABC Logistics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
     :root {
@@ -21,7 +21,7 @@
       --text:      #0f172a;
       --sub:       #475569;
       --muted:     #94a3b8;
-      --font-head: 'Syne', sans-serif;
+      --font-head: 'Barlow Condensed', sans-serif;
       --font-body: 'DM Sans', sans-serif;
       --font-mono: 'DM Mono', monospace;
       --shadow:    0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
@@ -54,9 +54,9 @@
 
     .nav-logo {
       font-family: var(--font-head);
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: 0.5px;
       color: var(--text);
       display: flex;
       align-items: center;
@@ -109,9 +109,10 @@
 
     .page-header h1 {
       font-family: var(--font-head);
-      font-size: 2rem;
+      font-size: 2.6rem;
       font-weight: 800;
-      letter-spacing: -1px;
+      letter-spacing: 0.5px;
+      line-height: 1;
       color: var(--text);
     }
 
@@ -147,9 +148,9 @@
 
     .stat-value {
       font-family: var(--font-head);
-      font-size: 2rem;
+      font-size: 2.6rem;
       font-weight: 800;
-      letter-spacing: -1px;
+      letter-spacing: 0.5px;
       line-height: 1;
       margin-bottom: 4px;
     }
@@ -190,9 +191,9 @@
 
     .card-title {
       font-family: var(--font-head);
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      letter-spacing: -0.3px;
+      letter-spacing: 0.5px;
       color: var(--text);
     }
 
@@ -651,7 +652,7 @@
       </div>
     </div>
 
-    <!-- DOUGHNUT CHART -->
+    <!-- DOUGHNUT CHART 
     <div class="card">
       <div class="card-header">
         <span class="card-title">Units by Category</span>
@@ -663,7 +664,7 @@
         <canvas id="donutChart" height="200"></canvas>
       </div>
     </div>
-
+  -->
   </div>
 
   <div class="dashboard-grid">
@@ -798,7 +799,7 @@
 
   const DONUT_COLORS = ['#2563eb','#16a34a','#ea580c','#9333ea','#64748b'];
 
-  Chart.defaults.font.family = "'DM Sans', sans-serif";
+  Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
   Chart.defaults.color       = '#94a3b8';
 
   let barChartInst     = null;
